@@ -1,0 +1,26 @@
+<div style="margin:12px;float:right"><button mat-raised-button>Sign Up</button></div>
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Log in</mat-card-title>
+    </mat-card-header>
+    <form class="example-form">
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input type="email" (keyup)="validation()" [(ngModel)]="email" name="email" matInput placeholder="Email">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input type="password" (keyup)="validation()" name="password" [(ngModel)]="password" matInput
+            placeholder="Password">
+        </mat-form-field>
+        <section class="example-section">
+          <mat-checkbox matInput class="example-margin" [(ngModel)]="remember" name="remember">Check me!</mat-checkbox>
+        </section>
+      </mat-card-content>
+      <button [disabled]="!submit" (click)="onSubmit()" mat-stroked-button color="accent" class="btn-block">Sign
+        in</button>
+
+    </form>
+  </mat-card>
+</div>
